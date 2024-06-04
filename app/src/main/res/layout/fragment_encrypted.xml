@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Encrypted">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplikasi Enkripsi Text"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="70dp"
+            android:fontFamily="monospace">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="monospace"
+            android:text="Plaintext"
+            android:textSize="15dp"
+            tools:ignore="TextSizeCheck">
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:boxBackgroundMode="outline"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:id="@+id/input_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:fontFamily="monospace"
+                android:textSize="12sp"
+                android:hint="PlainText"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:boxBackgroundMode="outline"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:id="@+id/input_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:fontFamily="monospace"
+                android:textSize="12sp"
+                android:hint="Key"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_encrypt"
+            android:layout_gravity="end"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/primary"
+            android:text="Encrypt"
+            android:fontFamily="monospace"
+            android:textStyle="bold"
+            android:textColor="@color/black">
+        </Button>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ciphertext"
+            android:fontFamily="monospace"
+            android:layout_marginStart="20dp"
+            android:textSize="15dp">
+        </TextView>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_margin="20dp">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Vigenere Cipher: "-->
+<!--                android:textSize="15dp"-->
+<!--                android:fontFamily="monospace">-->
+<!--            </TextView>-->
+<!--            <TextView-->
+<!--                android:id="@+id/ciphertext"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:fontFamily="monospace"-->
+<!--                android:text=""-->
+<!--                android:textSize="15dp">-->
+<!--            </TextView>-->
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_margin="20dp">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Scytale Cipher : "-->
+<!--                android:textSize="15dp"-->
+<!--                android:fontFamily="monospace">-->
+<!--            </TextView>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/ciphertextScytale"-->
+<!--                android:fontFamily="monospace"-->
+<!--                android:text=""-->
+<!--                android:textSize="15dp"-->
+<!--                android:focusable="true"-->
+<!--                android:clickable="true">-->
+<!--            </TextView>-->
+<!--        </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+            <LinearLayout
+                android:layout_width="330dp"
+                android:layout_height="match_parent"
+                android:gravity="start">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Ciphertext"
+                    android:fontFamily="monospace"
+                    android:text=""
+                    android:textSize="15dp"
+                    android:enabled="true"
+                    android:background="@drawable/no_underline">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_copy"
+                    android:id="@+id/copy"
+                    android:layout_gravity="end">
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
